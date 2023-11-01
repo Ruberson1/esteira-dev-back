@@ -1,0 +1,10 @@
+version: 0.0
+os: linux 
+files:
+  - source: /
+    destination: /var/www/html/esteira-dev-back
+hooks:
+  AfterInstall:
+    - location: app/Console/Commands/AfterInstall.sh
+      timeout: 300
+      runas: ubuntu
